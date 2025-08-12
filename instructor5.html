@@ -1,347 +1,371 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Instructor 5 — IBM Specialist Instructor (FTM • AIX/Power • Security)</title>
-  <meta name="description" content="Instructor 5 CV — IBM Financial Transaction Manager (FTM), AIX/Power, Security. 20+ years global enterprise training. IBM course author & Redbooks contributor." />
-
-  <!-- Carbon v11 core styles -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@carbon/styles@1/dist/styles.css"/>
-  <!-- IBM Plex (Carbon font) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600;700&display=swap">
-
-  <!-- Carbon Web Components -->
-  <script type="module">
-    import 'https://cdn.jsdelivr.net/npm/@carbon/web-components@2/es/components/header/index.js';
-    import 'https://cdn.jsdelivr.net/npm/@carbon/web-components@2/es/components/tag/index.js';
-    import 'https://cdn.jsdelivr.net/npm/@carbon/web-components@2/es/components/tile/index.js';
-    import 'https://cdn.jsdelivr.net/npm/@carbon/web-components@2/es/components/accordion/index.js';
-    import 'https://cdn.jsdelivr.net/npm/@carbon/web-components@2/es/components/structured-list/index.js';
-    import 'https://cdn.jsdelivr.net/npm/@carbon/web-components@2/es/components/button/index.js';
-    import 'https://cdn.jsdelivr.net/npm/@carbon/web-components@2/es/components/breadcrumb/index.js';
-    import 'https://cdn.jsdelivr.net/npm/@carbon/web-components@2/es/components/notification/index.js';
-  </script>
-
-  <!-- Carbon Charts (vanilla) -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/carbon-charts@1.13.17/dist/carbon-charts.css"/>
-  <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/carbon-charts@1.13.17/dist/carbon-charts.umd.js"></script>
-
-  <!-- Page spacing & alignment helpers (Carbon tokens only) -->
+  <title>Instructor 5 — IBM Specialist Instructor & Course Author</title>
+  <meta name="description" content="IBM FTM, AIX/Power, and Security instructor profile — professional summary, strengths, skills matrix, courses, certifications, Redbooks, global footprint, and engagement." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Carbon Design System (CSS only, minimal) -->
+  <link rel="stylesheet" href="https://unpkg.com/carbon-components/css/carbon-components.min.css">
   <style>
-    :root { scroll-behavior: smooth; }
-    cds-theme, body { background: var(--cds-background); }
-    main { padding-block: var(--cds-spacing-07); }
-    .section { margin-block: var(--cds-spacing-08) var(--cds-spacing-07); }
-    .eyebrow { letter-spacing:.02em; text-transform:uppercase; font-weight:600; color: var(--cds-text-secondary); }
-    .muted { color: var(--cds-text-secondary); }
-    .kpis { display:flex; gap: var(--cds-spacing-05); flex-wrap:wrap; align-items:center; }
-    .chips { display:flex; flex-wrap:wrap; gap: var(--cds-spacing-03); }
-    .tight > * + * { margin-top: var(--cds-spacing-03); }
-    .card-pad { padding: var(--cds-spacing-06); }
-    .matrix-title { white-space: nowrap; }
-    .matrix-cell { white-space: normal; }
-    .panel { padding: var(--cds-spacing-06); border: 1px solid var(--cds-border-subtle-01); border-radius: 8px; }
-    .chart-grid { display:grid; grid-template-columns: 1fr 1fr; gap: var(--cds-spacing-06); }
-    @media (max-width: 980px){ .chart-grid { grid-template-columns: 1fr; } }
-    .chart-wrap { background: var(--cds-layer); border: 1px solid var(--cds-border-subtle-01); border-radius: 8px; padding: var(--cds-spacing-05); }
-    .chart { height: 320px; }
-    .center { display:flex; align-items:center; }
-    .right { text-align:right; }
-    .print-only{ display:none; }
+    :root{
+      --bg: #0b0f17; /* deep night */
+      --surface: #101826;
+      --card: #121d30;
+      --text: #e6eefc;
+      --muted: #a7b3c9;
+      --brand: #0f62fe; /* Carbon primary */
+      --accent: #08BDBA; /* teal */
+      --accent2:#A56EFF; /* purple */
+      --ok:#42be65; --warn:#f1c21b; --err:#da1e28;
+      --ring: rgba(15,98,254,.35);
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 18px;
+    }
+    html,body{height:100%;}
+    body{
+      margin:0; font-family:'IBM Plex Sans',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--text); background: radial-gradient(1200px 800px at 80% -100px, rgba(165,110,255,.25), transparent),
+                         radial-gradient(1000px 600px at -10% 20%, rgba(8,189,186,.18), transparent),
+                         var(--bg);
+    }
+    /* Layout */
+    .container{max-width:1160px; margin:0 auto; padding: clamp(16px, 2vw, 24px);}    
+    header.hero{position:relative; overflow:hidden; border-radius: calc(var(--radius) + 6px);
+      background: linear-gradient(135deg, rgba(15,98,254,.25), rgba(165,110,255,.22) 45%, rgba(8,189,186,.18));
+      box-shadow: var(--shadow);
+    }
+    .hero-inner{display:grid; grid-template-columns: 1.2fr .8fr; gap: clamp(16px,2.5vw,28px); align-items:center; padding: clamp(28px, 5vw, 64px);} 
+    @media (max-width: 880px){ .hero-inner{grid-template-columns: 1fr;} }
+
+    .eyebrow{letter-spacing:.12em; text-transform:uppercase; color: var(--muted); font-weight:600; font-size:.8rem}
+    h1{font-weight:700; line-height:1.12; font-size: clamp(1.8rem, 3.8vw, 3rem); margin:.3rem 0 1rem}
+    .subtitle{color: var(--muted); font-size: clamp(1rem, 2vw, 1.1rem)}
+    .badges{display:flex; flex-wrap:wrap; gap:10px; margin-top:18px}
+    .badge{border:1px solid rgba(255,255,255,.08); background: rgba(255,255,255,.06); padding:8px 12px; border-radius:999px; font-weight:600; font-size:.85rem; backdrop-filter: blur(6px)}
+    .badge .dot{width:8px;height:8px;border-radius:50%;display:inline-block;margin-right:8px;}
+    .dot.ftm{background:var(--brand)}
+    .dot.aix{background:var(--ok)}
+    .dot.sec{background:var(--err)}
+    .dot.lnx{background:var(--accent)}
+    .statbar{display:grid; grid-template-columns: repeat(4, minmax(140px,1fr)); gap:16px; margin-top:22px}
+    @media (max-width: 720px){ .statbar{grid-template-columns: repeat(2,1fr);} }
+    .stat{background: var(--card); border:1px solid rgba(255,255,255,.06); padding:14px 16px; border-radius: 14px; box-shadow: var(--shadow)}
+    .stat h3{margin:0; font-size:1.6rem}
+    .stat p{margin:.25rem 0 0; color:var(--muted); font-size:.85rem}
+
+    /* Content sections */
+    section{margin-top: clamp(28px,5vw,56px)}
+    .section-card{background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01)); border:1px solid rgba(255,255,255,.06); border-radius: var(--radius); padding: clamp(18px,2.4vw,28px); box-shadow: var(--shadow)}
+    .split{display:grid; grid-template-columns: 1.1fr .9fr; gap:24px}
+    @media (max-width: 960px){ .split{grid-template-columns:1fr} }
+    h2{font-size: clamp(1.3rem, 2.5vw, 1.7rem); margin:0 0 10px}
+    .lead{color: var(--muted);}
+
+    /* Strengths */
+    .pill-list{display:flex; flex-wrap:wrap; gap:10px}
+    .pill{background: rgba(15, 98, 254, .15); color:#bcd3ff; border:1px solid rgba(15,98,254,.35); padding: 8px 12px; border-radius: 999px; font-weight:600}
+
+    /* Skills Matrix */
+    .scroll-x{overflow:auto; -webkit-overflow-scrolling: touch}
+    table{width:100%; border-collapse: separate; border-spacing:0}
+    thead th{position:sticky; top:0; background: #0f1523; z-index:1}
+    th, td{padding:14px 16px; text-align:left; border-bottom:1px solid rgba(255,255,255,.08)}
+    tr:hover td{background: rgba(255,255,255,.03)}
+    .chip{display:inline-flex; align-items:center; gap:8px; padding:6px 10px; border-radius:999px; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.08)}
+    .level{font-weight:700}
+
+    /* Visuals */
+    .viz{display:grid; grid-template-columns: 1fr 1fr; gap:20px}
+    @media (max-width: 900px){ .viz{grid-template-columns:1fr} }
+    .viz-card{background: var(--card); border-radius: var(--radius); padding:18px; border:1px solid rgba(255,255,255,.06)}
+    .viz h3{margin:0 0 8px}
+
+    /* Courses grid */
+    .cards{display:grid; grid-template-columns: repeat(3, 1fr); gap:18px}
+    @media (max-width: 1020px){ .cards{grid-template-columns: repeat(2, 1fr);} }
+    @media (max-width: 680px){ .cards{grid-template-columns: 1fr;} }
+    .card{background: var(--card); border:1px solid rgba(255,255,255,.06); border-radius: 16px; padding:16px; transition: transform .2s ease, box-shadow .2s ease; box-shadow: var(--shadow)}
+    .card:hover{transform: translateY(-4px); box-shadow: 0 16px 36px rgba(0,0,0,.45)}
+
+    /* Global footprint chips */
+    .countries{display:flex; flex-wrap:wrap; gap:10px}
+    .flag{padding:8px 10px; border-radius: 10px; background: rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.08); font-weight:600}
+
+    /* CTA */
+    .cta{display:flex; flex-wrap:wrap; gap:12px}
+    .btn{--b: var(--brand); display:inline-flex; align-items:center; gap:10px; padding:12px 18px; border-radius: 12px; border:1px solid var(--ring); background: linear-gradient(180deg, rgba(15,98,254,.25), rgba(15,98,254,.18)); color: #dfe9ff; text-decoration:none; font-weight:700; box-shadow: 0 8px 20px rgba(15,98,254,.25)}
+    .btn.secondary{--b: var(--accent); background: linear-gradient(180deg, rgba(8,189,186,.23), rgba(8,189,186,.14)); color:#e7fffd; border-color: rgba(8,189,186,.35); box-shadow: 0 8px 20px rgba(8,189,186,.22)}
+
+    footer{margin-top: 48px; padding: 22px 0; color: var(--muted); font-size:.9rem}
+
+    /* Micro-animations */
+    @keyframes floaty { 0%{transform: translateY(0)} 50%{transform: translateY(-6px)} 100%{transform: translateY(0)} }
+    .badge:nth-child(1){animation: floaty 6s ease-in-out infinite}
+    .badge:nth-child(2){animation: floaty 6.5s ease-in-out infinite}
+    .badge:nth-child(3){animation: floaty 7s ease-in-out infinite}
+    .badge:nth-child(4){animation: floaty 7.5s ease-in-out infinite}
+
+    /* Print */
     @media print{
-      cds-header, .no-print{ display:none !important; }
-      .print-only{ display:block; }
-      main{ padding:0; }
-      .chart { height: 260px; }
+      body{background:#fff; color:#000}
+      .hero-inner, .section-card{box-shadow:none}
+      a{color:#000}
     }
   </style>
 </head>
-
 <body>
-  <cds-theme theme="g10">
-    <!-- Header -->
-    <cds-header aria-label="Skunkworks Academy">
-      <cds-header-name href="/" prefix="Skunkworks Academy">Instructor 5</cds-header-name>
-    </cds-header>
-
-    <!-- Content -->
-    <main class="cds--grid">
-      <!-- Masthead -->
-      <section class="cds--row section">
-        <div class="cds--col-sm-4 cds--col-md-6 cds--col-lg-12">
-          <cds-breadcrumb no-trailing-slash>
-            <cds-breadcrumb-item href="/academy">Academy</cds-breadcrumb-item>
-            <cds-breadcrumb-item href="/academy/instructors">Instructors</cds-breadcrumb-item>
-            <cds-breadcrumb-item>Instructor 5</cds-breadcrumb-item>
-          </cds-breadcrumb>
-          <h1 class="cds--display-05" style="margin-block: var(--cds-spacing-04) var(--cds-spacing-05);">
-            Instructor 5 — IBM Specialist Instructor & Course Author
-          </h1>
-          <p class="cds--body-long-01 muted">
-            Enterprise instructor with 20+ years of global delivery across IBM platforms. Co-author of IBM Redbooks and creator of multiple IBM courses.
-            Recognized for clear, hands-on instruction, expert facilitation, and consistently high learner satisfaction.
-          </p>
-          <div class="kpis" style="margin-top: var(--cds-spacing-05);">
-            <cds-tag type="teal">IBM FTM (Payments)</cds-tag>
-            <cds-tag type="purple">AIX / Power Systems</cds-tag>
-            <cds-tag type="blue">Security (QRadar, Guardium)</cds-tag>
-            <cds-tag type="green">Linux & Automation</cds-tag>
-            <cds-tag type="cool-gray">20+ Countries</cds-tag>
-            <cds-tag type="magenta">Course Author & TTT</cds-tag>
+  <div class="container">
+    <header class="hero" role="banner">
+      <div class="hero-inner">
+        <div>
+          <div class="eyebrow">Academy Instructors</div>
+          <h1>Instructor 5 — IBM Specialist Instructor & Course Author</h1>
+          <p class="subtitle">Enterprise instructor with 20+ years of global delivery across IBM platforms. Co‑author of IBM Redbooks and creator of multiple IBM courses. Recognized for clear, hands‑on instruction, expert facilitation, and consistently high learner satisfaction.</p>
+          <div class="badges" aria-label="Key domains">
+            <span class="badge"><span class="dot ftm" aria-hidden="true"></span>IBM FTM (Payments)</span>
+            <span class="badge"><span class="dot aix" aria-hidden="true"></span>AIX / Power Systems</span>
+            <span class="badge"><span class="dot sec" aria-hidden="true"></span>Security (QRadar, Guardium)</span>
+            <span class="badge"><span class="dot lnx" aria-hidden="true"></span>Linux & Automation</span>
+          </div>
+          <div class="statbar" role="list" aria-label="Quick stats">
+            <div class="stat" role="listitem"><h3>20+ Countries</h3><p>Global enablement footprint</p></div>
+            <div class="stat" role="listitem"><h3>FTM • AIX • Sec</h3><p>Core specialization</p></div>
+            <div class="stat" role="listitem"><h3>Course Author</h3><p>Labs & TTT programs</p></div>
+            <div class="stat" role="listitem"><h3>Top‑Quartile</h3><p>Learner evaluations</p></div>
           </div>
         </div>
-      </section>
-
-      <!-- Summary panels -->
-      <section class="cds--row section">
-        <div class="cds--col-sm-4 cds--col-md-6 cds--col-lg-8">
-          <div class="panel">
-            <p class="eyebrow">Professional Summary</p>
-            <div class="tight">
-              <p class="cds--body-long-01">Specialist IBM instructor and consultant focused on **Financial Transaction Manager (FTM)**, **AIX/Power**, and **Security**.
-                Deep experience building enterprise labs (MQ, DB2, Liberty, ITX), guiding teams through production-grade deployments, and running Train-the-Trainer programs.</p>
-              <ul class="cds--list--unordered">
-                <li>Global enablement across banking, telco, and public sector</li>
-                <li>Architect-level guidance with pragmatic, hands-on labs</li>
-                <li>Proven track record of top-quartile learner evaluations</li>
-              </ul>
-            </div>
-          </div>
+        <div>
+          <!-- Decorative / illustrative block -->
+          <svg viewBox="0 0 520 520" width="100%" height="auto" role="img" aria-label="Instructor expertise visualization" style="filter: drop-shadow(0 16px 30px rgba(0,0,0,.45)); border-radius: 20px">
+            <defs>
+              <linearGradient id="g1" x1="0" x2="1">
+                <stop offset="0%" stop-color="#0f62fe" stop-opacity=".9"/>
+                <stop offset="100%" stop-color="#a56eff" stop-opacity=".9"/>
+              </linearGradient>
+            </defs>
+            <rect x="0" y="0" width="520" height="520" rx="20" fill="#0e1524"/>
+            <g transform="translate(260,260)">
+              <!-- Radar grid -->
+              <g fill="none" stroke="rgba(255,255,255,.12)">
+                <polygon points="0,-200 173,-100 173,100 0,200 -173,100 -173,-100"/>
+                <polygon points="0,-160 138,-80 138,80 0,160 -138,80 -138,-80"/>
+                <polygon points="0,-120 104,-60 104,60 0,120 -104,60 -104,-60"/>
+              </g>
+              <!-- Radar shape (FTM, AIX, Security, Linux, Automation, Delivery) -->
+              <polygon fill="url(#g1)" opacity=".45" stroke="#08bdba" stroke-width="2"
+                points="0,-180 150,-90 150,60 0,150 -140,70 -120,-70"/>
+              <!-- Axes labels -->
+              <g font-size="12" fill="#cfe0ff" text-anchor="middle">
+                <text x="0" y="-210">FTM / Payments</text>
+                <text x="185" y="-100">AIX / Power</text>
+                <text x="185" y="105">Security</text>
+                <text x="0" y="220">Delivery</text>
+                <text x="-185" y="105">Automation</text>
+                <text x="-185" y="-100">Linux</text>
+              </g>
+            </g>
+          </svg>
         </div>
-        <div class="cds--col-sm-4 cds--col-md-6 cds--col-lg-4">
-          <cds-tile class="card-pad tight">
-            <p class="eyebrow">Teaching Strengths</p>
-            <ul class="cds--list--unordered">
-              <li>Clarity & logical sequencing</li>
-              <li>Hands-on first: labs over slides</li>
-              <li>Outcome-driven: HA/DR, SLAs, observability</li>
-              <li>Empathetic coaching & mentoring</li>
-            </ul>
-          </cds-tile>
-        </div>
-      </section>
+      </div>
+    </header>
 
-      <!-- Skills Matrix -->
-      <section class="cds--row section" id="skills">
-        <div class="cds--col-sm-4 cds--col-md-6 cds--col-lg-12">
-          <p class="eyebrow">Skills Matrix</p>
-          <cds-structured-list>
-            <cds-structured-list-head>
-              <cds-structured-list-header-row>
-                <cds-structured-list-header-cell class="matrix-title">Domain</cds-structured-list-header-cell>
-                <cds-structured-list-header-cell>Core Skills</cds-structured-list-header-cell>
-                <cds-structured-list-header-cell class="right">Experience</cds-structured-list-header-cell>
-                <cds-structured-list-header-cell class="right">Competency*</cds-structured-list-header-cell>
-              </cds-structured-list-header-row>
-            </cds-structured-list-head>
-            <cds-structured-list-body>
-              <cds-structured-list-row>
-                <cds-structured-list-cell class="matrix-title">Payments & FTM</cds-structured-list-cell>
-                <cds-structured-list-cell class="matrix-cell">FTM4IP & FTM4C, OAC operations, ISO 20022 (pacs/pain/camt), ITX mapping (inbound/outbound), MQ/DB2/Liberty integration</cds-structured-list-cell>
-                <cds-structured-list-cell class="right">10+ yrs</cds-structured-list-cell>
-                <cds-structured-list-cell class="right"><strong>Expert</strong></cds-structured-list-cell>
-              </cds-structured-list-row>
-              <cds-structured-list-row>
-                <cds-structured-list-cell class="matrix-title">AIX / Power</cds-structured-list-cell>
-                <cds-structured-list-cell class="matrix-cell">AIX Admin I–V, Performance, WLM, Security, HACMP/PowerHA, NIM, Kernel Internals, GPFS</cds-structured-list-cell>
-                <cds-structured-list-cell class="right">15+ yrs</cds-structured-list-cell>
-                <cds-structured-list-cell class="right"><strong>Expert</strong></cds-structured-list-cell>
-              </cds-structured-list-row>
-              <cds-structured-list-row>
-                <cds-structured-list-cell class="matrix-title">Security</cds-structured-list-cell>
-                <cds-structured-list-cell class="matrix-cell">QRadar SIEM (Foundations/Advanced), Guardium (Foundations), incident playbooks, compliance reporting</cds-structured-list-cell>
-                <cds-structured-list-cell class="right">8+ yrs</cds-structured-list-cell>
-                <cds-structured-list-cell class="right"><strong>Advanced</strong></cds-structured-list-cell>
-              </cds-structured-list-row>
-              <cds-structured-list-row>
-                <cds-structured-list-cell class="matrix-title">Linux & Automation</cds-structured-list-cell>
-                <cds-structured-list-cell class="matrix-cell">Linux admin/networking, shell/Perl scripting, CI/CD fundamentals, automation for lab builds</cds-structured-list-cell>
-                <cds-structured-list-cell class="right">10+ yrs</cds-structured-list-cell>
-                <cds-structured-list-cell class="right"><strong>Advanced</strong></cds-structured-list-cell>
-              </cds-structured-list-row>
-            </cds-structured-list-body>
-          </cds-structured-list>
-          <p class="muted" style="margin-top: var(--cds-spacing-03);">*Competency scale: Practitioner → Advanced → Expert</p>
+    <!-- Professional Summary & Strengths -->
+    <section class="split">
+      <article class="section-card">
+        <h2>Professional Summary</h2>
+        <p class="lead">Specialist IBM instructor and consultant focused on <strong>Financial Transaction Manager (FTM)</strong>, <strong>AIX/Power</strong>, and <strong>Security</strong>. Deep experience building enterprise labs (MQ, DB2, Liberty, ITX), guiding teams through production‑grade deployments, and running Train‑the‑Trainer programs.</p>
+        <ul>
+          <li>Global enablement across banking, telco, and public sector</li>
+          <li>Architect‑level guidance with pragmatic, hands‑on labs</li>
+          <li>Proven track record of top‑quartile learner evaluations</li>
+        </ul>
+      </article>
+      <aside class="section-card">
+        <h2>Teaching Strengths</h2>
+        <div class="pill-list" aria-label="Strengths">
+          <span class="pill">Clarity & logical sequencing</span>
+          <span class="pill">Hands‑on first: labs over slides</span>
+          <span class="pill">Outcome‑driven: HA/DR, SLAs, observability</span>
+          <span class="pill">Empathetic coaching & mentoring</span>
         </div>
-      </section>
+      </aside>
+    </section>
 
-      <!-- Competency Charts -->
-      <section class="cds--row section" id="charts">
-        <div class="cds--col-sm-4 cds--col-md-6 cds--col-lg-12">
-          <p class="eyebrow">Competency Visuals</p>
-          <div class="chart-grid">
-            <div class="chart-wrap">
-              <h3 class="cds--productive-heading-02" style="margin-bottom: var(--cds-spacing-03);">Domain Competencies (Radar)</h3>
-              <div id="radarChart" class="chart" role="img" aria-label="Radar chart showing domain competencies"></div>
-            </div>
-            <div class="chart-wrap">
-              <h3 class="cds--productive-heading-02" style="margin-bottom: var(--cds-spacing-03);">FTM / Payments Sub-skills (Bar)</h3>
-              <div id="barChart" class="chart" role="img" aria-label="Bar chart showing FTM and payments sub-skill strengths"></div>
-            </div>
-          </div>
+    <!-- Skills Matrix -->
+    <section class="section-card">
+      <h2>Skills Matrix</h2>
+      <div class="scroll-x" role="region" aria-label="Skills matrix horizontal scroll">
+        <table aria-describedby="competency-note">
+          <thead>
+            <tr>
+              <th>Domain</th>
+              <th>Core Skills</th>
+              <th>Experience</th>
+              <th>Competency*</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="chip"><span class="dot ftm"></span>Payments &amp; FTM</span></td>
+              <td>FTM4IP &amp; FTM4C, OAC operations, ISO 20022 (pacs/pain/camt), ITX mapping (inbound/outbound), MQ/DB2/Liberty integration</td>
+              <td>10+ yrs</td>
+              <td class="level">Expert</td>
+            </tr>
+            <tr>
+              <td><span class="chip"><span class="dot aix"></span>AIX / Power</span></td>
+              <td>AIX Admin I–V, Performance, WLM, Security, HACMP/PowerHA, NIM, Kernel Internals, GPFS</td>
+              <td>15+ yrs</td>
+              <td class="level">Expert</td>
+            </tr>
+            <tr>
+              <td><span class="chip"><span class="dot sec"></span>Security</span></td>
+              <td>QRadar SIEM (Foundations/Advanced), Guardium (Foundations), incident playbooks, compliance reporting</td>
+              <td>8+ yrs</td>
+              <td class="level">Advanced</td>
+            </tr>
+            <tr>
+              <td><span class="chip"><span class="dot lnx"></span>Linux &amp; Automation</span></td>
+              <td>Linux admin/networking, shell/Perl scripting, CI/CD fundamentals, automation for lab builds</td>
+              <td>10+ yrs</td>
+              <td class="level">Advanced</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p id="competency-note" class="lead" style="margin-top:8px">*Competency scale: Practitioner → Advanced → Expert</p>
+    </section>
+
+    <!-- Visuals: Radar + Bars -->
+    <section class="viz">
+      <div class="viz-card">
+        <h3>Domain Competencies (Radar)</h3>
+        <svg viewBox="0 0 420 280" width="100%" height="auto" role="img" aria-label="Competency radar">
+          <defs>
+            <linearGradient id="vr" x1="0" x2="1">
+              <stop offset="0%" stop-color="#0f62fe"/>
+              <stop offset="100%" stop-color="#08bdba"/>
+            </linearGradient>
+          </defs>
+          <g transform="translate(210,140)">
+            <g fill="none" stroke="rgba(255,255,255,.14)">
+              <polygon points="0,-110 95,-55 95,55 0,110 -95,55 -95,-55"/>
+              <polygon points="0,-80 69,-40 69,40 0,80 -69,40 -69,-40"/>
+              <polygon points="0,-50 43,-25 43,25 0,50 -43,25 -43,-25"/>
+            </g>
+            <polygon fill="url(#vr)" opacity=".5" stroke="#a56eff" stroke-width="2"
+              points="0,-100 86,-48 86,35 0,85 -80,40 -70,-40"/>
+          </g>
+        </svg>
+      </div>
+      <div class="viz-card">
+        <h3>FTM / Payments Sub‑skills (Bar)</h3>
+        <svg viewBox="0 0 520 220" width="100%" height="auto" role="img" aria-label="Bar chart for FTM sub-skills">
+          <defs>
+            <linearGradient id="bars" x1="0" x2="1">
+              <stop offset="0%" stop-color="#0f62fe"/>
+              <stop offset="100%" stop-color="#a56eff"/>
+            </linearGradient>
+          </defs>
+          <g transform="translate(20,20)" fill="url(#bars)">
+            <rect x="0" y="10" width="360" height="20" rx="6"/>
+            <rect x="0" y="60" width="320" height="20" rx="6"/>
+            <rect x="0" y="110" width="340" height="20" rx="6"/>
+            <rect x="0" y="160" width="300" height="20" rx="6"/>
+            <g fill="#cfe0ff" font-size="12">
+              <text x="370" y="25">ITX mapping (in/out)</text>
+              <text x="330" y="75">ISO 20022 (pacs/pain/camt)</text>
+              <text x="350" y="125">MQ/DB2/Liberty integration</text>
+              <text x="310" y="175">OAC operations</text>
+            </g>
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <!-- Courses -->
+    <section class="section-card">
+      <h2>Selected Courses & Delivery</h2>
+      <div class="cards" role="list">
+        <div class="card" role="listitem"><strong>FTM Immediate Payments (FTM4IP)</strong><br/><span class="lead">Architecture, flows, operations & OAC</span></div>
+        <div class="card" role="listitem"><strong>FTM Check Services (FTM4C)</strong><br/><span class="lead">Image repository, rules, user exits</span></div>
+        <div class="card" role="listitem"><strong>ITX Mapping for ISO 20022</strong><br/><span class="lead">pacs/pain/camt, validation & promotion</span></div>
+        <div class="card" role="listitem"><strong>AIX Administration I–V</strong><br/><span class="lead">Performance, Storage, Security, PD</span></div>
+        <div class="card" role="listitem"><strong>HACMP/PowerHA</strong><br/><span class="lead">Planning, migration, masterclass</span></div>
+        <div class="card" role="listitem"><strong>NIM, Kernel Internals, TCP/IP, Scripting</strong><br/><span class="lead">Korn/Bash, Perl</span></div>
+        <div class="card" role="listitem"><strong>IBM QRadar SIEM</strong><br/><span class="lead">Foundations, Advanced</span></div>
+        <div class="card" role="listitem"><strong>IBM Guardium (v10) Foundation</strong></div>
+        <div class="card" role="listitem"><strong>TSM / Spectrum Protect</strong></div>
+        <div class="card" role="listitem"><strong>SPSS Statistics</strong><br/><span class="lead">Essentials; Data Management & Manipulation</span></div>
+      </div>
+    </section>
+
+    <!-- Certifications & Redbooks -->
+    <section class="split">
+      <article class="section-card">
+        <h2>Certifications (selected)</h2>
+        <div class="pill-list">
+          <span class="pill">AIX Admin &amp; Support (4.3.3–7.1)</span>
+          <span class="pill">AIX Communications</span>
+          <span class="pill">AIX Performance &amp; Recovery</span>
+          <span class="pill">HACMP / PowerHA</span>
+          <span class="pill">Virtualization &amp; Enterprise Support</span>
+          <span class="pill">TSM / Spectrum Protect</span>
         </div>
-      </section>
+      </article>
+      <aside class="section-card">
+        <h2>IBM Redbooks (co‑author)</h2>
+        <ul>
+          <li>AIX 5L Performance Tools Handbook</li>
+          <li>AIX 5L Practical Performance Tools and Tuning Guide</li>
+          <li>Using Relational Databases and RIM</li>
+        </ul>
+      </aside>
+    </section>
 
-      <!-- Courses & Delivery -->
-      <section class="cds--row section">
-        <div class="cds--col-sm-4 cds--col-md-6 cds--col-lg-12">
-          <p class="eyebrow">Selected Courses & Delivery</p>
-          <cds-accordion>
-            <cds-accordion-item title="Payments & FTM Enablement">
-              <ul class="cds--list--unordered">
-                <li>FTM Immediate Payments (FTM4IP) — architecture, flows, operations & OAC</li>
-                <li>FTM Check Services (FTM4C) — image repository, rules, user exits</li>
-                <li>ITX Mapping for ISO 20022 — pacs/pain/camt, validation & promotion</li>
-              </ul>
-            </cds-accordion-item>
-            <cds-accordion-item title="AIX / Power Systems">
-              <ul class="cds--list--unordered">
-                <li>AIX Administration I–V; Performance; Storage; Security; Problem Determination</li>
-                <li>HACMP/PowerHA (planning, migration, masterclass)</li>
-                <li>NIM, Kernel Internals, TCP/IP, Korn/Bash, Perl</li>
-              </ul>
-            </cds-accordion-item>
-            <cds-accordion-item title="Security, Data & Operations">
-              <ul class="cds--list--unordered">
-                <li>IBM QRadar SIEM (Foundations, Advanced)</li>
-                <li>IBM Guardium (v10) Foundation</li>
-                <li>TSM / Spectrum Protect</li>
-                <li>SPSS Statistics: Essentials; Data Management & Manipulation</li>
-              </ul>
-            </cds-accordion-item>
-          </cds-accordion>
-        </div>
-      </section>
+    <!-- Global footprint -->
+    <section class="section-card">
+      <h2>Global Training Footprint</h2>
+      <p class="lead">Delivery across Africa, Middle East, Europe, and APAC.</p>
+      <div class="countries" aria-label="Countries delivered in">
+        <span class="flag">South Africa</span><span class="flag">Botswana</span><span class="flag">Namibia</span><span class="flag">Mozambique</span><span class="flag">Zimbabwe</span><span class="flag">Kenya</span><span class="flag">Ethiopia</span><span class="flag">Malawi</span><span class="flag">Nigeria</span><span class="flag">Mauritius</span><span class="flag">UAE</span><span class="flag">Bahrain</span><span class="flag">Kuwait</span><span class="flag">Qatar</span><span class="flag">Saudi Arabia</span><span class="flag">Germany</span><span class="flag">Austria</span><span class="flag">Czech Republic</span><span class="flag">France</span><span class="flag">England</span><span class="flag">Taiwan</span><span class="flag">Australia</span>
+      </div>
+    </section>
 
-      <!-- Certifications & Redbooks -->
-      <section class="cds--row section">
-        <div class="cds--col-sm-4 cds--col-md-6 cds--col-lg-6">
-          <p class="eyebrow">Certifications (selected)</p>
-          <div class="chips">
-            <cds-tag type="blue">AIX Admin & Support (4.3.3–7.1)</cds-tag>
-            <cds-tag type="purple">AIX Communications</cds-tag>
-            <cds-tag type="teal">AIX Performance & Recovery</cds-tag>
-            <cds-tag type="green">HACMP / PowerHA</cds-tag>
-            <cds-tag type="cool-gray">Virtualization & Enterprise Support</cds-tag>
-            <cds-tag type="magenta">TSM / Spectrum Protect</cds-tag>
-          </div>
-        </div>
-        <div class="cds--col-sm-4 cds--col-md-6 cds--col-lg-6">
-          <p class="eyebrow">IBM Redbooks (co-author)</p>
-          <ul class="cds--list--unordered">
-            <li>AIX 5L Performance Tools Handbook</li>
-            <li>AIX 5L Practical Performance Tools and Tuning Guide</li>
-            <li>Using Relational Databases and RIM</li>
-          </ul>
-        </div>
-      </section>
+    <!-- Events & Recognition -->
+    <section class="section-card">
+      <h2>Events & Recognition</h2>
+      <ul>
+        <li>Invited speaker at IBM Systems Technical Universities (multiple years)</li>
+        <li>Top evaluations in enterprise cohorts; frequent perfect‑score classes</li>
+        <li>Trusted to run Train‑the‑Trainer (TTT) enablement globally</li>
+      </ul>
+    </section>
 
-      <!-- Global Footprint & Events -->
-      <section class="cds--row section">
-        <div class="cds--col-sm-4 cds--col-md-6 cds--col-lg-7">
-          <cds-tile class="card-pad tight">
-            <h3 class="cds--productive-heading-02">Global Training Footprint</h3>
-            <p class="muted">Delivery across Africa, Middle East, Europe, and APAC.</p>
-            <div class="chips" style="margin-top: var(--cds-spacing-03);">
-              <cds-tag type="cool-gray">South Africa</cds-tag><cds-tag type="cool-gray">Botswana</cds-tag>
-              <cds-tag type="cool-gray">Namibia</cds-tag><cds-tag type="cool-gray">Mozambique</cds-tag>
-              <cds-tag type="cool-gray">Zimbabwe</cds-tag><cds-tag type="cool-gray">Kenya</cds-tag>
-              <cds-tag type="cool-gray">Ethiopia</cds-tag><cds-tag type="cool-gray">Malawi</cds-tag>
-              <cds-tag type="cool-gray">Nigeria</cds-tag><cds-tag type="cool-gray">Mauritius</cds-tag>
-              <cds-tag type="cool-gray">UAE</cds-tag><cds-tag type="cool-gray">Bahrain</cds-tag>
-              <cds-tag type="cool-gray">Kuwait</cds-tag><cds-tag type="cool-gray">Qatar</cds-tag>
-              <cds-tag type="cool-gray">Saudi Arabia</cds-tag><cds-tag type="cool-gray">Germany</cds-tag>
-              <cds-tag type="cool-gray">Austria</cds-tag><cds-tag type="cool-gray">Czech Republic</cds-tag>
-              <cds-tag type="cool-gray">France</cds-tag><cds-tag type="cool-gray">England</cds-tag>
-              <cds-tag type="cool-gray">Taiwan</cds-tag><cds-tag type="cool-gray">Australia</cds-tag>
-            </div>
-          </cds-tile>
-        </div>
-        <div class="cds--col-sm-4 cds--col-md-6 cds--col-lg-5">
-          <cds-tile class="card-pad tight">
-            <h3 class="cds--productive-heading-02">Events & Recognition</h3>
-            <ul class="cds--list--unordered">
-              <li>Invited speaker at IBM Systems Technical Universities (multiple years)</li>
-              <li>Top evaluations in enterprise cohorts; frequent perfect-score classes</li>
-              <li>Trusted to run Train-the-Trainer (TTT) enablement globally</li>
-            </ul>
-          </cds-tile>
-        </div>
-      </section>
+    <!-- Engagement -->
+    <section class="section-card">
+      <h2>Engagement</h2>
+      <p class="lead">Availability via Skunkworks Academy. Request a private cohort or align to the public schedule.</p>
+      <div class="cta">
+        <a class="btn" href="mailto:academy@skunkworks.africa" aria-label="Email Skunkworks Academy">
+          <!-- mail icon -->
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z"/></svg>
+          Email Skunkworks Academy
+        </a>
+        <a class="btn secondary" href="https://www.skunkworksacademy.com/ibm/ftm/SKW-FTM-IL05" target="_blank" rel="noopener" aria-label="View FTM Course">
+          <!-- link icon -->
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 3h7v7h-2V6.414l-9.293 9.293-1.414-1.414L17.586 5H14V3Z"/><path d="M5 5h6v2H7v10h10v-4h2v6H5V5Z"/></svg>
+          View FTM Course
+        </a>
+      </div>
+    </section>
 
-      <!-- CTA -->
-      <section class="cds--row section no-print">
-        <div class="cds--col-sm-4 cds--col-md-6 cds--col-lg-8">
-          <p class="eyebrow">Engagement</p>
-          <p class="muted">Availability via Skunkworks Academy. Request a private cohort or align to the public schedule.</p>
-          <div style="display:flex; gap: var(--cds-spacing-05); flex-wrap:wrap; margin-top: var(--cds-spacing-05);">
-            <cds-button kind="primary" href="mailto:training@skunkworks.africa">Email Skunkworks Academy</cds-button>
-            <cds-button kind="tertiary" href="/ibm/ftm/SKW-FTM-IL05">View FTM Course</cds-button>
-          </div>
-        </div>
-      </section>
-
-      <!-- Footer -->
-      <section class="cds--row section">
-        <div class="cds--col-sm-4 cds--col-md-6 cds--col-lg-12">
-          <p class="muted">© <span id="yr"></span> Skunkworks (Pty) Ltd. IBM and product names are trademarks of IBM Corporation. Instructor 5 is represented & scheduled via Skunkworks Academy.</p>
-        </div>
-      </section>
-    </main>
-  </cds-theme>
-
-  <!-- Charts data & init -->
-  <script>
-    document.getElementById('yr').textContent = new Date().getFullYear();
-
-    // Radar: domain competencies (0-100)
-    const radarData = [
-      { group: "Competency", key: "FTM / Payments", value: 92 },
-      { group: "Competency", key: "AIX / Power", value: 95 },
-      { group: "Competency", key: "Security (QRadar/Guardium)", value: 85 },
-      { group: "Competency", key: "Linux & Automation", value: 88 },
-      { group: "Competency", key: "Instructional Design", value: 90 },
-    ];
-    const radarOptions = {
-      title: "",
-      radar: { axes: { angle: "key", value: "value" } },
-      data: { groupMapsTo: "group" },
-      legend: { enabled: false },
-      height: "320px",
-      toolbar: { enabled: false },
-      theme: "g10",
-    };
-    new CarbonCharts.RadarChart(
-      document.getElementById("radarChart"),
-      { data: radarData, options: radarOptions }
-    );
-
-    // Bar: FTM/payments sub-skills
-    const barData = [
-      { group: "FTM/OAC", key: "Ops & Investigations", value: 92 },
-      { group: "FTM/Flows", key: "PT/EP/Wrapper", value: 90 },
-      { group: "ISO 20022", key: "pacs/pain/camt", value: 88 },
-      { group: "ITX", key: "Mapping & Promotion", value: 91 },
-      { group: "Platform", key: "MQ/DB2/Liberty", value: 89 },
-    ];
-    const barOptions = {
-      title: "",
-      axes: {
-        left: { mapsTo: "value", domain: [0, 100] },
-        bottom: { mapsTo: "key", scaleType: "labels" },
-      },
-      height: "320px",
-      legend: { enabled: false },
-      toolbar: { enabled: false },
-      theme: "g10",
-    };
-    new CarbonCharts.SimpleBarChart(
-      document.getElementById("barChart"),
-      { data: barData, options: barOptions }
-    );
-  </script>
+    <footer>
+      © 2025 Skunkworks (Pty) Ltd. IBM and product names are trademarks of IBM Corporation. Instructor 5 is represented &amp; scheduled via Skunkworks Academy.
+    </footer>
+  </div>
 </body>
 </html>
